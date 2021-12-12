@@ -1,4 +1,4 @@
-package com.ice.tiptext;
+package com.ice.tiptext.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
