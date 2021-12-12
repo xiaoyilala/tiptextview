@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+    <!--10%透明度-->
+    <solid
+        android:color="#1a05c1ae"
+        />
+    <corners android:radius="@dimen/sw_px8" />
+    <!--60%透明度-->
+    <stroke
+        android:width="@dimen/sw_px1"
+        android:color="#9905c1ae"
+        />
+</shape>
