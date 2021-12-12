@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.ice.tiptext.TipTextView
+    <com.ice.tiptext.widget.TipTextView
         android:layout_marginTop="20dp"
         android:id="@+id/tv1"
         android:padding="2dp"
@@ -22,7 +22,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.ice.tiptext.TipTextView
+    <com.ice.tiptext.widget.TipTextView
         android:layout_marginTop="20dp"
         android:id="@+id/tv2"
         android:padding="2dp"
@@ -39,7 +39,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
-    <com.ice.tiptext.TipTextView
+    <com.ice.tiptext.widget.TipTextView
         android:layout_marginTop="20dp"
         android:id="@+id/tv3"
         android:padding="2dp"
@@ -56,7 +56,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
-    <com.ice.tiptext.TipTextView
+    <com.ice.tiptext.widget.TipTextView
         android:layout_marginTop="20dp"
         android:id="@+id/tv4"
         android:padding="2dp"
@@ -73,7 +73,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent" />
 
-    <com.ice.tiptext.TipTextView
+    <com.ice.tiptext.widget.TipTextView
         android:layout_marginTop="20dp"
         android:id="@+id/tv5"
         android:padding="2dp"
@@ -90,7 +90,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
-    <com.ice.tiptext.TipTextView
+    <com.ice.tiptext.widget.TipTextView
         android:layout_marginTop="20dp"
         android:id="@+id/tv6"
         android:padding="2dp"
