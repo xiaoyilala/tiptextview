@@ -9,6 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tiptext">
+
+        <meta-data
+            android:name="BUILD_CHANNEL"
+            android:value="${BUILD_CHANNEL_VALUE}" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -13,10 +13,20 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        flavorDimensions "channel"
     }
+
+    copyCustomConfig()
+    customChannelFlavors()
 
     buildTypes {
         release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -36,4 +46,66 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    api 'com.squareup.okhttp3:okhttp:3.12.12'
+    // Retrofit2
+    api 'com.squareup.retrofit2:retrofit:2.3.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    api 'com.squareup.retrofit2:converter-gson:2.3.0'
+    // RxJava
+    api 'io.reactivex.rxjava3:rxjava:3.0.0'
+    api 'io.reactivex.rxjava3:rxandroid:3.0.0'
+}
+
+def copyCustomConfig() {
+    logH1 "拷贝配置文件"
+    if (project.hasProperty('cmdConfigId') || project.hasProperty('defaultConfigId')) {
+        def config;
+        if(project.hasProperty('cmdConfigId')){
+            config = project.cmdConfigId;
+            loginfo "来自命令行指定的构建环境配置文件信息:${config}"
+        }else if(project.hasProperty('defaultConfigId')){
+            config = project.defaultConfigId;
+            loginfo "来自配置文件指定的构建环境配置文件信息:${config}"
+        }
+        def rootPath = rootProject.getRootDir().getAbsolutePath();
+        def srcConfig = "${rootPath}/custom/${config}";
+        def destConfig = "${rootPath}/app/src/main/java/com/ice/tiptext/config";
+        copy {
+            from srcConfig
+            into destConfig
+        }
+
+//        copyAppCustomConfig(config);
+    } else {
+        loginfo "没有配置文件路径，不做任何修改"
+    }
+}
+
+def customChannelFlavors() {
+    def channelId = 11000001;
+    boolean customChannel = false;
+    if (project.hasProperty('cmdChannelId')) {
+        customChannel = true
+        channelId = project.cmdChannelId
+    } else if (project.hasProperty('defaultChannelId')) {
+        customChannel = true
+        channelId = project.defaultChannelId
+    }
+
+    project.task('customChannelFlavors') {
+        if (customChannel) {
+            project.android.productFlavors.create(channelId, {
+                manifestPlaceholders = [BUILD_CHANNEL_VALUE: channelId]
+            })
+        }
+    }
+}
+
+def logH1(String s) {
+    println ":" + project.name + ":" + "【" + s + "】"
+}
+
+def loginfo(String s) {
+    println "info-- " + s
 }

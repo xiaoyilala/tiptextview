@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.ice.statusbarlib.StatusBarUtil;
+import com.ice.tiptext.util.GetMetaDataUtil;
+import com.ice.tiptext.util.LogUtils;
 import com.ice.tiptext.widget.CommonSwitch;
 import com.ice.tiptext.widget.CommonToast;
 
@@ -28,5 +30,8 @@ public class MainActivity extends AppCompatActivity {
                 CommonToast.showSuccessToast(MainActivity.this, "ice", CommonToast.LENGTH_SHORT);
             }
         });
+
+
+        LogUtils.d("ice", GetMetaDataUtil.getApplicationMetaData(this));
     }
 }
