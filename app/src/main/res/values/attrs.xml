@@ -84,4 +84,14 @@
             <enum name="circle" value="2" />
         </attr>-->
     </declare-styleable>
+
+    <!--收缩展开TextView,对应ExpandableTextView-->
+    <declare-styleable name="ExpandableTextView">
+        <attr name="exMaxCollapsedLines" format="integer"/>
+        <attr name="exAnimDuration" format="integer"/>
+        <attr name="exAnimAlphaStart" format="float"/>
+        <attr name="exAnimAlphaEnable" format="boolean"/>
+        <attr name="exExpandButton" format="string"/>
+        <attr name="exCollapseButton" format="string"/>
+    </declare-styleable>
 </resources>

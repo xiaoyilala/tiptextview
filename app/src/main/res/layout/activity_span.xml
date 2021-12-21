@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--  AbsoluteSizeSpan  -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_span_1"
+        android:text="在开发过程中经常需要使用文本，有时候需要对一段文字中的部分文字进行特殊的处理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--  BackgroundColorSpan  -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_span_2"
+        android:text="在开发过程中经常需要使用文本，有时候需要对一段文字中的部分文字进行特殊的处理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_span_1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--  ClickableSpan  -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_span_3"
+        android:text="在开发过程中经常需要使用文本，有时候需要对一段文字中的部分文字进行特殊的处理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_span_2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--  DrawableMarginSpan  -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_span_4"
+        android:text="在开发过程中经常需要使用文本，有时候需要对一段文字中的部分文字进行特殊的处理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_span_3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--  DynamicDrawableSpan  -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_span_5"
+        android:text="在开发过程中经常需要使用文本，有时候需要对一段文字中的部分文字进行特殊的处理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_span_4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--  ForegroundColorSpan  -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_span_6"
+        android:text="在开发过程中经常需要使用文本，有时候需要对一段文字中的部分文字进行特殊的处理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_span_5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--  IconMarginSpan  -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_span_7"
+        android:text="在开发过程中经常需要使用文本，有时候需要对一段文字中的部分文字进行特殊的处理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_span_6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--  ImageSpan  -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_span_8"
+        android:text="在开发过程中经常需要使用文本，有时候需要对一段文字中的部分文字进行特殊的处理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_span_7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--  MaskFilterSpan  -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_span_9"
+        android:text="在开发过程中经常需要使用文本，有时候需要对一段文字中的部分文字进行特殊的处理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_span_8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--  QuoteSpan  -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_span_10"
+        android:text="在开发过程中经常需要使用文本，有时候需要对一段文字中的部分文字进行特殊的处理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_span_9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--  RelativeSizeSpan  -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_span_11"
+        android:text="在开发过程中经常需要使用文本，有时候需要对一段文字中的部分文字进行特殊的处理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_span_10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--  ScaleXSpan  -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_span_12"
+        android:text="在开发过程中经常需要使用文本，有时候需要对一段文字中的部分文字进行特殊的处理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_span_11"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--  StrikethroughSpan  -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_span_13"
+        android:text="在开发过程中经常需要使用文本，有时候需要对一段文字中的部分文字进行特殊的处理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_span_12"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--  StyleSpan  -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_span_14"
+        android:text="在开发过程中经常需要使用文本，有时候需要对一段文字中的部分文字进行特殊的处理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_span_13"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--  SubscriptSpan  -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_span_15"
+        android:text="在开发过程中经常需要使用文本，有时候需要对一段文字中的部分文字进行特殊的处理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_span_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--  SuperscriptSpan  -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_span_16"
+        android:text="在开发过程中经常需要使用文本，有时候需要对一段文字中的部分文字进行特殊的处理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_span_15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--  UnderlineSpan  -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_span_17"
+        android:text="在开发过程中经常需要使用文本，有时候需要对一段文字中的部分文字进行特殊的处理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_span_16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--  多个  -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_span_18"
+        android:text="在开发过程中经常需要使用文本，有时候需要对一段文字中的部分文字进行特殊的处理"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_span_17"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

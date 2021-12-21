@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--收缩展开TextView,对应ExpandableTextView-->
+    <item name="expandable_text" type="id" />
+    <item name="expandable_button" type="id" />
+
+</resources>
