@@ -1,5 +1,6 @@
 package com.ice.tiptext.ui;
 
+import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.BlurMaskFilter;
@@ -29,6 +30,7 @@ import android.text.style.StyleSpan;
 import android.text.style.SubscriptSpan;
 import android.text.style.SuperscriptSpan;
 import android.text.style.UnderlineSpan;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,12 +40,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.content.res.AppCompatResources;
 
 import com.ice.tiptext.R;
+import com.ice.tiptext.manager.ActivityManager;
+import com.ice.tiptext.widget.CommonToast;
 
 public class SpanActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_span);
+
+        ActivityManager.getInstance().addFrontBackCallback((front)->{
+            CommonToast.showToast(getApplicationContext(), front+"", Toast.LENGTH_SHORT);
+            Log.d("SpanActivity", "front: "+front);
+        });
+
+        Activity topActivity = ActivityManager.getInstance().getTopActivity(false);
+        if(topActivity!=null) {
+            CommonToast.showToast(getApplicationContext(), topActivity.getLocalClassName(), Toast.LENGTH_SHORT);
+            Log.d("SpanActivity", "topActivity: "+topActivity.getLocalClassName());
+        }
 
         TextView tv_span_1 = findViewById(R.id.tv_span_1);
         TextView tv_span_2 = findViewById(R.id.tv_span_2);
@@ -83,7 +98,12 @@ public class SpanActivity extends BaseActivity {
         builder.setSpan(new ClickableSpan() {
             @Override
             public void onClick(View widget) {
-                Toast.makeText(SpanActivity.this,"ClickableSpan",Toast.LENGTH_SHORT).show();
+//                Toast.makeText(SpanActivity.this,"ClickableSpan",Toast.LENGTH_SHORT).show();
+                Activity topActivity = ActivityManager.getInstance().getTopActivity(false);
+                if(topActivity!=null) {
+                    CommonToast.showToast(getApplicationContext(), topActivity.getLocalClassName(), Toast.LENGTH_SHORT);
+                    Log.d("SpanActivity", "topActivity: "+topActivity.getLocalClassName());
+                }
             }
         }, 3, 9, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
         tv_span_3.setText(builder);

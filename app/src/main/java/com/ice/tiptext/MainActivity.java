@@ -11,6 +11,7 @@ import com.ice.tiptext.permisson.IOnPermissionCallback;
 import com.ice.tiptext.permisson.Permission;
 import com.ice.tiptext.permisson.PermissionUtils;
 import com.ice.tiptext.ui.BaseActivity;
+import com.ice.tiptext.ui.FragmentUseActivity;
 import com.ice.tiptext.ui.SpanActivity;
 import com.ice.tiptext.util.GetMetaDataUtil;
 import com.ice.tiptext.util.LogUtils;
@@ -50,6 +51,10 @@ public class MainActivity extends BaseActivity {
 
         findViewById(R.id.tv_span).setOnClickListener(v->{
             start(MainActivity.this, SpanActivity.class);
+        });
+
+        findViewById(R.id.tv_fragment).setOnClickListener(v->{
+            start(MainActivity.this, FragmentUseActivity.class);
         });
 
         PermissionUtils.with(this).permission(Permission.Group.STORAGE).request(new IOnPermissionCallback() {
